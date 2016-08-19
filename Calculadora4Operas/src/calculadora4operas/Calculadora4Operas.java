@@ -1,16 +1,15 @@
-package calculadora4operas;
+package calculadora4operaciones;
 
 /**
  *
- * @authorRodinzon Parra Pinto & Hernán A. Laborde
+ * @author Rodinson Parra Pinto & Hernán A. Laborde
  */
-public class Calculadora4Operas {
+public class Calculadora4Operaciones {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Instancia un formulario principal
+        FormularioPrincipal formPpal = new FormularioPrincipal();
+        formPpal.setVisible(true);
     }
     
 }
