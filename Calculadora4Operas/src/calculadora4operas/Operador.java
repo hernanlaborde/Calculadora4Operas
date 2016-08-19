@@ -1,10 +1,16 @@
+//
+// Autores:
+// HERNAN ALBERTO LABORDE
+// RODINSON REINALDO PARRA PINTO
+//
+// Tutor:
+// IBO LUIS CERRA ESCOBAR
+//
+// Universidad EAN - 2016
+//
 
 package calculadora4operas;
 
-/**
- *
- * @author herna
- */
 public class Operador {
     private float Numero1;
     private float Numero2;
