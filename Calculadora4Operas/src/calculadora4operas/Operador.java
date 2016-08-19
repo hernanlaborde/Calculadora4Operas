@@ -45,11 +45,13 @@ public class Operador {
         this.Numero2 = Numero2;
     }
     
+    // Sumar
     public float sumar(){
         setResultado(getNumero1() + getNumero2());
         return getResultado();
     }
 
+    // Restar
     public float restar(){
         setResultado(getNumero1() - getNumero2());
         return getResultado();
