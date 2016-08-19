@@ -50,5 +50,8 @@ public class Operador {
         return getResultado();
     }
 
-    
+    public float restar(){
+        setResultado(getNumero1() - getNumero2());
+        return getResultado();
+    }
 }
