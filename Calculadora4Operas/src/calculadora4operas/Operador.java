@@ -56,4 +56,10 @@ public class Operador {
         setResultado(getNumero1() - getNumero2());
         return getResultado();
     }
+    
+     // Multiplicar
+    public float multiplicar(){
+        setResultado(getNumero1() * getNumero2());
+        return getResultado();
+    }
 }
