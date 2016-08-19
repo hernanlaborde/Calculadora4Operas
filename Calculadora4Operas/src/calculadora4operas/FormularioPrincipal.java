@@ -101,6 +101,11 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         });
 
         btnMultiplicar.setText("Multiplicar");
+        btnMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicarActionPerformed(evt);
+            }
+        });
 
         btbDividir.setText("Dividir");
 
@@ -207,6 +212,12 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         
         txtResultado.setText(String.valueOf(calculo.restar()));
     }//GEN-LAST:event_btnRestarActionPerformed
+
+    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
+         Operador calculo = new Operador(Float.parseFloat(txtNumero1.getText()), Float.parseFloat(txtNumero2.getText()));
+        
+        txtResultado.setText(String.valueOf(calculo.multiplicar()));
+    }//GEN-LAST:event_btnMultiplicarActionPerformed
 
     /**
      * @param args the command line arguments
