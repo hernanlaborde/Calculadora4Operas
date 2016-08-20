@@ -226,9 +226,13 @@ public class FormularioPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRestarActionPerformed
 
     private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
-         Operador calculo = new Operador(Float.parseFloat(txtNumero1.getText()), Float.parseFloat(txtNumero2.getText()));
-        
-        txtResultado.setText(String.valueOf(calculo.multiplicar()));
+         
+        try {
+            Operador calculo = new Operador(Float.parseFloat(txtNumero1.getText()), Float.parseFloat(txtNumero2.getText()));
+            txtResultado.setText(String.valueOf(calculo.multiplicar()));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, "Debe ingresar un número");
+        }
     }//GEN-LAST:event_btnMultiplicarActionPerformed
 
     private void btbDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbDividirActionPerformed
