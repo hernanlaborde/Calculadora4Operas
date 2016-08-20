@@ -209,9 +209,14 @@ public class FormularioPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNumero1ComponentAdded
 
     private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
-        Operador calculo = new Operador(Float.parseFloat(txtNumero1.getText()), Float.parseFloat(txtNumero2.getText()));
         
-        txtResultado.setText(String.valueOf(calculo.sumar()));
+        try {
+            Operador calculo = new Operador(Float.parseFloat(txtNumero1.getText()), Float.parseFloat(txtNumero2.getText()));
+            txtResultado.setText(String.valueOf(calculo.sumar()));
+        } catch (Exception e) {
+            //Mensaje de error si se inserta cualquier caracter que no sea un número
+            JOptionPane.showMessageDialog(rootPane, "Debe ingresar un número");
+        }
     }//GEN-LAST:event_btnSumarActionPerformed
 
     private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
