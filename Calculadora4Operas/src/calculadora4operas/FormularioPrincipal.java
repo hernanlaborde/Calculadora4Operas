@@ -108,6 +108,11 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         });
 
         btbDividir.setText("Dividir");
+        btbDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btbDividirActionPerformed(evt);
+            }
+        });
 
         etiquetaResultado.setText("RESULTADO:");
 
@@ -186,7 +191,9 @@ public class FormularioPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
-        
+        txtNumero1.setText("");
+        txtNumero2.setText("");
+        txtNumero1.requestFocus();
     }//GEN-LAST:event_btnReiniciarActionPerformed
 
     private void txtNumero1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNumero1FocusGained
@@ -218,6 +225,11 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         
         txtResultado.setText(String.valueOf(calculo.multiplicar()));
     }//GEN-LAST:event_btnMultiplicarActionPerformed
+
+    private void btbDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbDividirActionPerformed
+        Operador calculo = new Operador(Float.parseFloat(txtNumero1.getText()), Float.parseFloat(txtNumero2.getText()));
+        txtResultado.setText(String.valueOf(calculo.dividir()));
+    }//GEN-LAST:event_btbDividirActionPerformed
 
     /**
      * @param args the command line arguments
