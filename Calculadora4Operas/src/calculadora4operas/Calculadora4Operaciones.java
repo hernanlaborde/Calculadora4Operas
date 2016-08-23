@@ -7,7 +7,6 @@
 // IBO LUIS CERRA ESCOBAR
 //
 // Universidad EAN - 2016
-//
 
 package calculadora4operas;
 
