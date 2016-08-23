@@ -240,8 +240,12 @@ public class FormularioPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMultiplicarActionPerformed
 
     private void btbDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbDividirActionPerformed
-        Operador calculo = new Operador(Float.parseFloat(txtNumero1.getText()), Float.parseFloat(txtNumero2.getText()));
-        txtResultado.setText(String.valueOf(calculo.dividir()));
+         try {
+            Operador calculo = new Operador(Float.parseFloat(txtNumero1.getText()), Float.parseFloat(txtNumero2.getText()));
+            txtResultado.setText(String.valueOf(calculo.dividir()));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, "Debe ingresar un número");
+        }
     }//GEN-LAST:event_btbDividirActionPerformed
 
     /**
